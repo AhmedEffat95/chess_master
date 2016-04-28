@@ -31,7 +31,7 @@ public class RealBoard implements PieceValues
 	protected Piece piece[]= new Piece[33];  //Create instances for 32 pieces
 	protected int spotState[][] = new int[9][9]; //array to hold 64 board positions (will use starting from index 1,1)
 	protected static ArrayList<int[][]> allSpotStates = new ArrayList<int[][]>();
-	protected static initialSpotState = new int[9][9];
+	private static int [][] initialSpotState = new int[9][9];
 	
 	protected Piece selectedPiece;   // to hold the piece to be moved
 	protected Piece attackedPiece;   //to hold the piece to be removed
@@ -152,6 +152,13 @@ public class RealBoard implements PieceValues
 		spotState[1][6] = black_bishop;
 		piece[30] = new Bishop(this, "black", 1 , 6); //white bishop on coordinates (1,6)
 		
+		for (int x=1; x<9; x++)
+		{
+			for (int y=1; y<9; y++)
+			{
+				initialSpotState[x][y] = spotState[x][y];
+			}
+		}
 	}
 	
 	public int checkSpotValue(int x, int y)
@@ -404,4 +411,5 @@ public class RealBoard implements PieceValues
 		displayPosition = new MovesHistoryDisplay("SpecifiedPositionDisplay", row, col);
 		displayPosition.start();
 	}
+	public static int[][] getInitialSpotState() { return initialSpotState; }
 }

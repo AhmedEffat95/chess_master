@@ -235,7 +235,7 @@ public final class UI extends JFrame implements ActionListener, UITools
 	{
 		int[][] position = new int[1][2];
 		
-		position[0][0] = positonR[0][0];
+		position[0][0] = positionR[0][0];    //To avoid changing the value that was originally passed to this function
 		position[0][1] = positionR[0][1];
 		
 		position[0][0] = (FlipView.isBoardFlipped()) ? (9 - positionR[0][0]) : positionR[0][0];
@@ -276,7 +276,7 @@ public final class UI extends JFrame implements ActionListener, UITools
 				spots[position[0][0]][position[0][1]].setIcon(blackbishop);
 				break;
 			case 11:
-				spots[position[0][0]][position].setIcon(blackrook);
+				spots[position[0][0]][position[0][1]].setIcon(blackrook);
 				break;
 			case 12:
 				spots[position[0][0]][position[0][1]].setIcon(blackqueen);

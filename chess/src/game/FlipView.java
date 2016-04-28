@@ -21,7 +21,11 @@ public class FlipView
 		int [][] tempSpotState = new int[9][9];
 		int tempPos[][] = new int[1][2];
 		
-		if(MaintainMovesHistory.getDisplayUptoDate()==true)  //if display is up to date, display the flipped position of the uptodate position
+		if(MaintainMovesHistory.movesCounter==0)
+		{
+			tempSpotState = RealBoard.getInitialSpotState();
+		}
+		else if(MaintainMovesHistory.getDisplayUptoDate()==true)  //if display is up to date, display the flipped position of the uptodate position
 		{	
 			tempSpotState = RealBoard.allSpotStates.get(RealBoard.allSpotStates.size()-1);  //get the last position
 		}
@@ -49,7 +53,11 @@ public class FlipView
 		
 		boardFlipped = false;
 		
-		if(MaintainMovesHistory.getDisplayUptoDate()==true)  //if display is up to date, display the flipped position of the uptodate position
+		if(MaintainMovesHistory.movesCounter==0)
+		{
+			tempSpotState = RealBoard.getInitialSpotState();
+		}
+		else if(MaintainMovesHistory.getDisplayUptoDate()==true)  //if display is up to date, display the flipped position of the uptodate position
 		{	
 			tempSpotState = RealBoard.allSpotStates.get(RealBoard.allSpotStates.size()-1);  //get the last position
 		}

@@ -15,7 +15,7 @@ import pieces.Rook;
  *  checking for a Checkmate or a Stalemate and supporting advanced moves such as En passant, 
  *  castling and promotions.
  */
-public class    AdvancedGame 
+public class AdvancedGame 
 {
 	RealBoard Game;  //To hold the game's Object
 	
