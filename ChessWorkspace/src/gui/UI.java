@@ -233,51 +233,56 @@ public final class UI extends JFrame implements ActionListener, UITools
 	}
 	public static void updateButton(int positionR[][], int spotValueR)
 	{
-		positionR[0][0] = (FlipView.isBoardFlipped()) ? (9 - positionR[0][0]) : positionR[0][0];
-		positionR[0][1] = (FlipView.isBoardFlipped()) ? (9 - positionR[0][1]) : positionR[0][1];
+		int[][] position = new int[1][2];
+		
+		position[0][0] = positonR[0][0];
+		position[0][1] = positionR[0][1];
+		
+		position[0][0] = (FlipView.isBoardFlipped()) ? (9 - positionR[0][0]) : positionR[0][0];
+		position[0][1] = (FlipView.isBoardFlipped()) ? (9 - positionR[0][1]) : positionR[0][1];
 		switch(spotValueR)	
 		{
 			case 0:
-				spots[positionR[0][0]][positionR[0][1]].setIcon(empty);
+				spots[position[0][0]][position[0][1]].setIcon(empty);
 				break;
 			case 1:
-				spots[positionR[0][0]][positionR[0][1]].setIcon(whiteking);
+				spots[position[0][0]][position[0][1]].setIcon(whiteking);
 				break;
 			case 2:
-				spots[positionR[0][0]][positionR[0][1]].setIcon(whitepawn);
+				spots[position[0][0]][position[0][1]].setIcon(whitepawn);
 				break;
 			case 3:
-				spots[positionR[0][0]][positionR[0][1]].setIcon(whiteknight);
+				spots[position[0][0]][position[0][1]].setIcon(whiteknight);
 				break;
 			case 4:
-				spots[positionR[0][0]][positionR[0][1]].setIcon(whitebishop);
+				spots[position[0][0]][position[0][1]].setIcon(whitebishop);
 				break;
 			case 5:
-				spots[positionR[0][0]][positionR[0][1]].setIcon(whiterook);
+				spots[position[0][0]][position[0][1]].setIcon(whiterook);
 				break;
 			case 6:
-				spots[positionR[0][0]][positionR[0][1]].setIcon(whitequeen);
+				spots[position[0][0]][position[0][1]].setIcon(whitequeen);
 				break;
 			case 7:
-				spots[positionR[0][0]][positionR[0][1]].setIcon(blackking);
+				spots[position[0][0]][position[0][1]].setIcon(blackking);
 				break;
 			case 8:
-				spots[positionR[0][0]][positionR[0][1]].setIcon(blackpawn);
+				spots[position[0][0]][position[0][1]].setIcon(blackpawn);
 				break;
 			case 9:
-				spots[positionR[0][0]][positionR[0][1]].setIcon(blackknight);
+				spots[position[0][0]][position[0][1]].setIcon(blackknight);
 				break;
 			case 10:
-				spots[positionR[0][0]][positionR[0][1]].setIcon(blackbishop);
+				spots[position[0][0]][position[0][1]].setIcon(blackbishop);
 				break;
 			case 11:
-				spots[positionR[0][0]][positionR[0][1]].setIcon(blackrook);
+				spots[position[0][0]][position].setIcon(blackrook);
 				break;
 			case 12:
-				spots[positionR[0][0]][positionR[0][1]].setIcon(blackqueen);
+				spots[position[0][0]][position[0][1]].setIcon(blackqueen);
 				break;
 			case 13:
-				spots[positionR[0][0]][positionR[0][1]].setBackground(Color.CYAN);;
+				spots[position[0][0]][position[0][1]].setBackground(Color.CYAN);;
 				break;
 		}
 			
