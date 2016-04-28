@@ -33,7 +33,7 @@ public final class UI extends JFrame implements ActionListener, UITools
 	 {		 
 		 new UI(); 
 	 }
-	private UI() //constructor
+	private UI() // constructor
 	{
 		super("Chess Master");
 		setSize(1200,900);
