@@ -31,6 +31,7 @@ public class RealBoard implements PieceValues
 	protected Piece piece[]= new Piece[33];  //Create instances for 32 pieces
 	protected int spotState[][] = new int[9][9]; //array to hold 64 board positions (will use starting from index 1,1)
 	protected static ArrayList<int[][]> allSpotStates = new ArrayList<int[][]>();
+	protected static initialSpotState = new int[9][9];
 	
 	protected Piece selectedPiece;   // to hold the piece to be moved
 	protected Piece attackedPiece;   //to hold the piece to be removed
