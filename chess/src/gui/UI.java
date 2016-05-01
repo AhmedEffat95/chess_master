@@ -282,7 +282,7 @@ public final class UI extends JFrame implements ActionListener, UITools
 				spots[position[0][0]][position[0][1]].setIcon(blackqueen);
 				break;
 			case 13:
-				spots[position[0][0]][position[0][1]].setBackground(Color.CYAN);;
+				spots[position[0][0]][position[0][1]].setBackground(Color.LIGHT_GRAY);;
 				break;
 		}
 			

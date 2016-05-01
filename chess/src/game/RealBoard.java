@@ -203,6 +203,7 @@ public class RealBoard implements PieceValues
 				System.out.println("Turn from white to black!");
 				setTurn("black");
 				MaintainMovesHistory.addRow(selectedPiece.getValue(),(attackedPiece==null)?false:true,selectedPosition, finalPosition);
+				FlipView.flipBoard();
 			}
 			else  //if it is black's turn
 			{
@@ -210,6 +211,7 @@ public class RealBoard implements PieceValues
 				setTurn("white");
 				MaintainMovesHistory.editRow(selectedPiece.getValue(),(attackedPiece==null)?false:true,selectedPosition, finalPosition);
 				System.out.println("Turn from black to white!");
+				FlipView.unflipBoard();
 			}
 			if (AdvGame.Checkmate())
 			{
